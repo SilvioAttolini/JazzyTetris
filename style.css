@@ -1,0 +1,97 @@
+/* ---------------------------- inizio @media screen -------------------------------------- */
+@media screen {
+
+html,body {
+  height: 100%;
+  margin: 0;
+}
+
+body{
+  font-size: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ---------------------------- grid-container -------------------------------------- */
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header header header"
+    "menu main main main main"
+    "menu main main main main";
+  grid-gap: 0.5em;
+  padding: 0.5em;
+  min-height:100%;
+}
+
+/* ---------------------------- fine grid-container -------------------------------------- */
+
+/* ---------------header------------*/
+.theheader{
+  background-color: black;
+  color: white;
+  grid-area: header;
+  padding: 0.1em;
+  text-align:center;
+  min-width: 30em;
+}
+/* --------------- fine header ------------*/
+
+/* ---------------------------------- menù ----------------------- */
+.navbar {
+  grid-area: menu;
+  height: auto;
+  max-width: 60em;
+  margin-left: 0;
+  margin-right: 0;
+  text-align: center;
+
+}
+/* stile nav */
+.navbar ul li a {
+  color: white;
+  font-size: 1em;
+  display: block;
+  padding: 1em 3em 1em 3em;
+  text-decoration: none; /* togliere sottolineatura ai link*/
+  background-color: black;
+}
+
+
+
+/* togliere impostazioni pallini nelle liste */
+.navbar ol, ul {
+  list-style: none;
+}
+
+/* on hover colore blu*/
+.navbar ul li a:hover {
+  background-color: grey;
+  color: black;
+}
+
+/* Pagina visitata in questo momento rimane il nav menu in grigio */
+.navbar ul li a.active {
+  background-color: grey;
+  color: black;
+}
+
+.navbar ul li a.disable {
+ pointer-events: none;
+ cursor: default;
+}
+/* ---------------------------- fine menù -------------------------------------- */
+
+/* ---------------------------- Archive content -------------------------------------- */
+.thecontentArchive {
+  /*grid-area: main;
+  padding:3%;
+  min-width: 30em;
+  padding-bottom:8em;*/
+}
+
+/* ---------------------------- fine home content -------------------------------------- */
+
+
+/* ---------------------------- fine @media screen -------------------------------------- */
