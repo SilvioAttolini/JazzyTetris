@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	<meta charset="utf-8" />
+	<meta name="author" content="DFFGLS">
+	<meta name="description" content="Musical Tetris">
+	<link rel="icon" href="#"><!-- fav icon -->
+	<title>New Game Part Two</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+	<!-- <script>
+		function replace() {
+  	location.replace("NewGame.html")
+}
+</script> -->
+<script>
+var i = 0;
+function move() {
+  if (i == 0) {
+    i = 1;
+    var elem = document.getElementById("myBar");
+    var width = 1;
+    var id = setInterval(frame, 50); /* duration of loading bar */
+    function frame() {
+			if(width >= 100) {
+				location.replace("Game.html"); /* when loading bar is completed it goes to Game directly */
+        clearInterval(id);
+        i = 0;
+      } else {
+        width++;
+        elem.style.width = width + "%";
+        elem.innerHTML = width + "%";
+      }
+    }
+  }
+}
+
+function validateChoice(){
+  /* ricordare all'user che se torna indietro perde la scelta effettuata */
+}
+</script>
+  <main class="grid-container">
+
+    <div class="theheader">
+    <h1>Tetris</h1>
+    <h2>New Game: Loading</h2>
+    </div>
+
+    <div class="navbar">
+      <ul>
+      <li><a href="NewGame.html" title="New Game Tetris" onclick="validateChoice()">New Game</a></li>
+      <li><a href="Game.html" title="Game Tetris" class="disable">Game</a></li>
+      <li><a href="Archive.html" title="Archive Tetris" class="disable">Archive</a></li>
+      <li><a href="MusicSheet.html" title="Music Sheet Tetris" class="disable">Music Sheet</a></li>
+      </ul>
+    </div> <!-- navbar -->
+
+    <div class="thecontent">
+
+      <div class="InnerContentNewGamePartTwo">
+
+      <button onclick="move()">GO</button>
+
+      <br>
+
+      <div id="myProgress">
+        <div id="myBar">5%</div>
+      </div>
+
+      </div>
+
+    </div>
+
+
+  </main>
+
+</body>
+
+</html>

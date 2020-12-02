@@ -26,7 +26,54 @@
       </ul>
     </div> <!-- navbar -->
 
-    <div class="thecontentNewGame">
+    <div class="thecontent">
+
+        <noscript>
+					<p class="warning"> Attenzione: il tuo browser non supporta JavaScript o è disabilitato. Delle funzionalità della pagina potrebbero non agire correttamente. </p>
+			</noscript>
+
+			<div class="form">
+				<form name="fNewGame" method="GET" action="NewGamePartTwo.html">
+
+					<label for="GameMode">Game mode:</label>
+          <select name="GameMode" onchange="">
+                      <option value="Simple" selected>Simple</option>
+                      <option value="Difficult">Difficult</option>
+                      <option value="Infinite">Infinite</option>
+          </select>
+
+          <label for="ton">Tonalità maggiore:</label>
+          <select name="ton" onchange="">
+                      <option value="FaDiesis" selected>Fa&#35;</option>
+                      <option value="Si">Si</option>
+											<option value="Mi">Mi</option>
+											<option value="La">La</option>
+											<option value="Re">Re</option>
+											<option value="Sol">Sol</option>
+											<option value="Do">Do</option>
+											<option value="Fa">Fa</option>
+											<option value="Sib">Sib</option>
+											<option value="Mib">Mib</option>
+											<option value="Lab">Lab</option>
+											<option value="Reb">Reb</option>
+          </select>
+
+					<input type="submit" value="New Game">
+
+
+				</form>
+
+			 <button onclick="redirectToRules()">How to Play</button>
+
+			</div> <!-- form -->
+
+							<script>
+								function redirectToRules() {
+  							location.replace("HowToPlay.html")
+							}
+
+							</script>
+
 
     </div>
 
